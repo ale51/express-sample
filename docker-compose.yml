@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: naoki0513/express-sample
+    container_name: express-sample
+    ports:
+      - '49160:8080'
+    restart: always
+    volumes:
+      - '.:/user/src/app'
